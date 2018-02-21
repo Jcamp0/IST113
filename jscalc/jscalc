@@ -1,0 +1,19 @@
+function add(num1,num2){
+     return parseInt(num1+num2);
+}
+function subtract(num1,num2){
+   return parseInt(num1-num2);
+}
+function divide(num1,num2){
+   return parseInt(num1/num2);
+}
+function multiply(num1,num2){
+    return parseInt(num1*num2);
+}
+function driver(){
+  
+   console.log("Sum of 10 and 2 is "+ add(10,2));
+   console.log("Difference between 10 and 2 is " + subtract(10,2));
+   console.log("Quotient of 10 and 2 is " + divide(10,2));
+   console.log("Product of 10 and 2 is " + multiply(10,2));
+}
