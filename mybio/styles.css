@@ -1,0 +1,113 @@
+*{
+	margin:0;
+	padding:0;
+	box-sizing: border-box;
+	
+}
+.page{color: #FFFFFF;
+	background-color: #400000;
+	font-family: "courier", sans-serif;
+	font-size: 18px;
+	
+}
+h1{
+	font-size: 3em;
+	text-align: center;
+}
+h2{
+	font-size: 1em;
+	text-align: center;
+}
+body{
+	background-color: #400000;
+	
+}
+
+
+
+.container{
+	 overflow: hidden;
+	margin: 0 auto;
+	width: 	60vw;
+	height: 80vh;
+	
+}
+.spacer{
+	margin:0 auto;
+	width:100px auto:
+}
+
+.header {
+	text-align: center;
+  width: 100vw;            
+  height: 10vh;
+  background-color: #D6E9FE;
+  font-size: 1em;
+  color:#000000;
+
+}
+.sidebar {
+
+float:right;
+width:25vw;
+height: 20px;
+	margin: 0 auto;
+	color: #fffff0; 
+	font-family:"arial";
+	text-align: center;
+	background-color: #D6E9FE;
+	 font-size: 1em;
+  color:#000000;
+
+}
+
+.hobbies{
+	float:left;
+width:25vw;
+height: 20px;
+	margin: o auto;
+	color: #fffff0; 
+	font-family:"arial";
+	text-align: center;
+	background-color: #D6E9FE;
+  font-size: 1em;
+  color:#000000;
+}
+
+.name{
+	color: #fffff0; 
+	font-family:"helvetica", "courier";
+	padding: 5px 10px;
+}
+
+.anchortest{
+	margin: 0 auto;
+	text-align: center;
+	color: #fffff0;
+	padding:10px auto;
+}
+.pictures{
+	text-align: center;
+	margin:0 auto;
+	
+}
+.footer {
+	  overflow: hidden;
+  width: 100vw;            
+  height: 10vh;
+  background-color: #D6E9FE;
+}
+.column1 {
+  width: 30vw;
+float:left;
+margin: 10px auto;
+  height: 3vh;
+ background-color: #400000;
+}
+.column2 {
+  width: 30vw;
+  margin: 10px auto;
+	float:right;
+  height: 3vh;
+ background-color: #400000;
+}
