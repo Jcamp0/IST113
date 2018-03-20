@@ -1,0 +1,22 @@
+h1{
+    width:20vw;
+    margin: 0 auto 10px auto;
+    text-align: center;
+}
+fieldset{
+    width:20vw;
+    margin: 5vh auto;
+    background-color: beige;
+}
+#taskListHeader{
+    width:20vw;
+    margin: 0 auto 10px auto;
+    text-align: center;
+    
+}
+#taskList{
+    width:15vw;
+    margin: 0 auto;
+    
+}
+
