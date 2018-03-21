@@ -9,10 +9,10 @@ function runTaskManager(){
     let deleteButton = document.createElement("button");       
     deleteButton.innerHTML = "Remove";
     
-
+    
     newElem.appendChild(newContent);
     newElem.appendChild(deleteButton);
-   
+    deleteButton.style.marginLeft = "10px";
     deleteButton.addEventListener("click", function() {
         this.parentNode.parentNode.removeChild(this.parentNode);
     });
