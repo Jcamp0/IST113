@@ -1,0 +1,24 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    height:100%;
+}
+#button{
+    margin: 30vh auto 60vh auto;
+    height: 10vh;
+    width: 200px;
+    
+    background-color: darkgray;
+}
+#switch{
+    margin: 0 auto 60vh auto;
+    width:40px;
+    height:10vh;
+    background-color: lightgray;
+    text-align: center;
+    float: left;
+   
+
+}
