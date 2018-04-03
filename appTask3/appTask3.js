@@ -1,5 +1,5 @@
-var myKey = "listValues"
-var myItems = []; 
+var myKey = "listValues";
+var myItems =[]; 
 
 
 function setupLocal() {
@@ -33,27 +33,31 @@ function createItem(createval){
     $newElem =$("<li></li>").text(createval);
 
     
+   
     $("#taskList").append($newElem);
-    
+    $($newElem).append('<button class="deleteButton">Delete</button>');
+   
     
       
-    $($newElem).on("click", function(){
-         
-        removeItem(this);
-       
+    $('.deleteButton').on("click", function(){
+
+          removeItem($newElem);
+           $(this).closest('li').remove();
+      
       });
     }
 
 function removeItem(removeval){
+  
     let item = $(removeval).text();
-    let index = myItems.indexOf(item);
-    
-    if (index !== -1) {
+  let item1 = item.replace("Delete","");
+    let index = myItems.indexOf(item1);
+   // if (index !== -1) {
         myItems.splice(index, 1);
-    }
-    saveItems();
-     $(removeval).remove();
- 
+    //}
+     
+    
+     saveItems();
 }
 function saveItems() {
     let myItemsString = JSON.stringify(myItems);
