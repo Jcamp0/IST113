@@ -1,64 +1,39 @@
 var myKey = "listValues";
 var myItems =[]; 
-
-
-function setupLocal() {
-
-     
-        if(localStorage.getItem(myKey) !== null) {
-      
-          
-          let myItemsString = localStorage.getItem(myKey);
-          
-       
-          myItems = JSON.parse(myItemsString);
-          
-         
-          $(myItems).each(function() {
+function setupLocal(){
+  
+    if(localStorage.getItem(myKey) !== null) {
+        let myItemsString = localStorage.getItem(myKey);
+         myItems = JSON.parse(myItemsString);
+         $(myItems).each(function() {
             createItem(this);
-          });
-        } 
-        $("#addTask").click(function(){
-            
-            input = $('#taskInput').val();
-            createItem(input);
-           myItems.push(input);
-           saveItems();
-           
     });
-    
-      }
+    }//if storage end
+    $("#addTask").click(function(){
+            
+        let input = $('#taskInput').val();
+       createItem(input);
+      myItems.push(input);
+      saveItems();
+    });
+}//local end
 
-function createItem(createval){
-    $newElem =$("<li></li>").text(createval);
-
-    
-   
+function createItem(itemValue){
+    $newElem =$("<li></li>").text(itemValue);
+    $newElem.on("click", function(){
+        removeItem(this);
+    });
     $("#taskList").append($newElem);
     $($newElem).append('<button class="deleteButton">Delete</button>');
-   
-    
-      
-    $('.deleteButton').on("click", function(){
+}//end of createItem function
 
-          removeItem($newElem);
-           $(this).closest('li').remove();
-      
-      });
-    }
+function removeItem(item){
+    let index = $(item).index();
+    myItems.splice(index,1);
+    saveItems();
+    $(item).remove();
+}//end of removeItem function
 
-function removeItem(removeval){
-  
-    let item = $(removeval).text();
-  let item1 = item.replace("Delete","");
-    let index = myItems.indexOf(item1);
-   // if (index !== -1) {
-        myItems.splice(index, 1);
-    //}
-     
-    
-     saveItems();
-}
 function saveItems() {
     let myItemsString = JSON.stringify(myItems);
     localStorage.setItem(myKey, myItemsString);
