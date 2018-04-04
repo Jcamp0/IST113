@@ -1,0 +1,72 @@
+﻿@{  string confirmation = "hello";
+    string nameString;
+    string emailString;
+
+    if (IsPost)
+    {
+
+        nameString = Request["full-name"];
+        emailString = Request["email"];
+        confirmation = "Thank you " + nameString + ". Your email address of: " + emailString + " has been logged.";
+
+
+
+    }
+
+
+}
+
+
+<!DOCTYPE html>
+<html>
+<header>
+    <title>Task Manager</title>
+    <link rel='stylesheet' href='appTask5.css'<link>
+</header>
+<body>
+    <div id="page">
+        <h1>The Task Manager</h1>
+        <fieldset>
+
+            <input id="taskInput" name="taskInput" type="text" />
+            <button id="addTask">Add Task</button>
+        </fieldset>
+        <h2 id="taskListHeader">To-Do-List</h2>
+        <ul id="taskList"></ul>
+    </div>
+
+</body>
+<footer>
+    <button onclick="contact()"> Contact </button>
+    <div id="contactDiv">
+        <form method='post' action="">
+            <div class='form-row'>
+                <label for='full-name'>Name</label>
+                <input id='full-name' name='full-name' type='text' />
+            </div>
+            <div class='form-row'>
+                <label for='email'>Email</label>
+                <input id='email'
+                       name='email'
+                       type='email'
+                       placeholder='joe@example.com' />
+            </div>
+            <div class='form-row'>
+                <label for='abstract'>Abstract</label>
+                <textarea id='abstract' name='abstract'></textarea>
+                <div class='instructions'>Enter your message here</div>
+            </div>
+            <div class='form-row'>
+                <button>Submit</button>
+            </div>
+           
+            <input id="confirmationBox" value="@confirmation" readonly>
+        </form>
+
+       
+    </div>
+
+</footer>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="appTask5.js"></script>
+</html>
