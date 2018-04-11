@@ -1,4 +1,4 @@
-﻿@{  string confirmation = "hello";
+﻿@{  string confirmation = " ";
     string nameString;
     string emailString;
 
@@ -37,8 +37,8 @@
 
 </body>
 <footer>
-    <button onclick="contact()"> Contact </button>
-    <div id="contactDiv">
+    <button id="contact"> Contact </button>
+    <div id="contactDiv" class="hidden">
         <form method='post' action="">
             <div class='form-row'>
                 <label for='full-name'>Name</label>
@@ -58,6 +58,7 @@
             </div>
             <div class='form-row'>
                 <button>Submit</button>
+
             </div>
            
             <input id="confirmationBox" value="@confirmation" readonly>

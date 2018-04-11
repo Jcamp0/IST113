@@ -42,8 +42,7 @@ function saveItems() {
   $(function() {
     setupLocal();
   });
-  function contact() {
-    var x = document.getElementById("contactDiv");
-    $x.toggle();
-}
-
+ 
+$("#contact").click(function () {
+    $("#contactDiv").toggle();
+});

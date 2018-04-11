@@ -30,3 +30,6 @@ fieldset{
     
     width:50vw;
 }
+.hidden {
+    display: none;
+}
